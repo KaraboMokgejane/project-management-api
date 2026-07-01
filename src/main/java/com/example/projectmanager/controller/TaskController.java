@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import jakarta.validation.Valid;
+// ... keep other imports
+
+    @PostMapping
+    public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
+        // ... keep your existing logic
+
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
